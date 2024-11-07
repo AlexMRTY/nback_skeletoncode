@@ -10,10 +10,15 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.core.view.WindowCompat
+import mobappdev.example.nback_cimpl.R
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -22,8 +27,8 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
+    primary = Color(0xFF7ab3ef),
+    secondary = Color(0xFF368ce7),
     tertiary = Pink40
 
     /* Other default colors to override
@@ -35,6 +40,10 @@ private val LightColorScheme = lightColorScheme(
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
     */
+)
+
+val robotoMonoFamily = FontFamily(
+    Font(R.font.roboto_mono_bold, FontWeight.Bold),
 )
 
 @Composable

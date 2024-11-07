@@ -42,7 +42,14 @@ int getIndexOf(Nback s, int i){
 
 void createNBackString(int nBackString[], int size, int combinations, int matchPercentage, int nback){
     // Seed the random number generator
-    srand((unsigned)time(NULL));
+//    srand((unsigned)time(NULL));
+    static int seeded = 0;  // Static variable to keep track of seeding
+
+    // Seed the random number generator only once
+    if (!seeded) {
+        srand((unsigned)time(NULL));
+        seeded = 1;
+    }
 
     // Initialize all elements in nBackString to 0
     for(int i = 0; i<size; i++){
